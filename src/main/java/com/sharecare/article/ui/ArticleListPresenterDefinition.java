@@ -13,7 +13,7 @@ public class ArticleListPresenterDefinition extends ConfiguredContentPresenterDe
 
         setImplementationClass(ArticleListPresenter.class);
         setViewType("listview");
-        setActive(false);
+        setActive(true);
         setIcon("icon-view-list");
     }
 }

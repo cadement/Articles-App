@@ -16,8 +16,6 @@ import info.magnolia.ui.api.event.ContentChangedEvent;
 import info.magnolia.ui.api.overlay.ConfirmationCallback;
 import info.magnolia.ui.form.action.SaveFormActionDefinition;
 import info.magnolia.ui.vaadin.overlay.MessageStyleTypeEnum;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.web.context.WebApplicationContext;
@@ -28,8 +26,6 @@ import javax.servlet.ServletContext;
 import java.util.Collection;
 
 public class DeleteArticleAction extends AbstractAction<SaveFormActionDefinition> {
-
-    private final Logger logger = LoggerFactory.getLogger(DeleteArticleAction.class);
 
     @Autowired private ArticleRepository articleRepository;
 
@@ -47,8 +43,6 @@ public class DeleteArticleAction extends AbstractAction<SaveFormActionDefinition
                                ServletContext servletContext) {
         super(definition);
 
-        logger.info("(" + definition.getName() + "," + items + "," + i18n.getClass().getSimpleName() + "," + uiContext + "," + eventBus + ")");
-
         this.items = items;
         this.i18n = i18n;
         this.uiContext = uiContext;
@@ -60,8 +54,6 @@ public class DeleteArticleAction extends AbstractAction<SaveFormActionDefinition
 
     @Override
     public void execute() throws ActionExecutionException {
-        logger.info("()");
-
         uiContext.openConfirmation(
                 MessageStyleTypeEnum.WARNING,
                 getConfirmationQuestion(),
@@ -83,16 +75,14 @@ public class DeleteArticleAction extends AbstractAction<SaveFormActionDefinition
     }
 
     protected void executeAfterConfirmation() {
-        logger.info("()");
-
         try {
             articleRepository.delete(FluentIterable.from(items)
-                                                .transform(new Function<BeanItem<Article>, Article>() {
-                                                    @Override
-                                                    public Article apply(BeanItem<Article> beanItem) {
-                                                        return beanItem.getBean();
-                                                    }
-                                                }));
+                                                   .transform(new Function<BeanItem<Article>, Article>() {
+                                                       @Override
+                                                       public Article apply(BeanItem<Article> beanItem) {
+                                                           return beanItem.getBean();
+                                                       }
+                                                   }));
 
 
             eventBus.fireEvent(new ContentChangedEvent(items.iterator().next().getBean()));

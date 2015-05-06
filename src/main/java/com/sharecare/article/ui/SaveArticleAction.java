@@ -9,8 +9,6 @@ import info.magnolia.ui.api.action.ActionExecutionException;
 import info.magnolia.ui.form.EditorCallback;
 import info.magnolia.ui.form.EditorValidator;
 import info.magnolia.ui.form.action.SaveFormActionDefinition;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
@@ -18,8 +16,6 @@ import org.springframework.web.context.support.WebApplicationContextUtils;
 import javax.servlet.ServletContext;
 
 public class SaveArticleAction extends AbstractAction<SaveFormActionDefinition> {
-
-    private final Logger logger = LoggerFactory.getLogger(SaveArticleAction.class);
 
     @Autowired private ArticleRepository articleRepository;
 
@@ -29,13 +25,11 @@ public class SaveArticleAction extends AbstractAction<SaveFormActionDefinition> 
 
     @Inject
     public SaveArticleAction(SaveFormActionDefinition definition,
-                                BeanItem<Article> item,
-                                EditorCallback callback,
-                                EditorValidator validator,
-                                ServletContext servletContext) {
+                             BeanItem<Article> item,
+                             EditorCallback callback,
+                             EditorValidator validator,
+                             ServletContext servletContext) {
         super(definition);
-
-        logger.info("(" + definition.getName() + "," + item + "," + callback + "," + validator + "," + servletContext + ")");
 
         this.item = item;
         this.callback = callback;
@@ -47,8 +41,6 @@ public class SaveArticleAction extends AbstractAction<SaveFormActionDefinition> 
 
     @Override
     public void execute() throws ActionExecutionException {
-        logger.info("()");
-
         validator.showValidation(true);
         if (validator.isValid()) {
             try {

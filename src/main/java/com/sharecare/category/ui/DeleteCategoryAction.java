@@ -1,0 +1,122 @@
+package com.sharecare.category.ui;
+
+import com.google.common.base.Function;
+import com.google.common.collect.FluentIterable;
+import com.google.inject.Inject;
+import com.sharecare.category.model.Category;
+import com.sharecare.category.model.CategoryRepository;
+import com.vaadin.data.util.BeanItem;
+import info.magnolia.event.EventBus;
+import info.magnolia.i18nsystem.SimpleTranslator;
+import info.magnolia.ui.api.action.AbstractAction;
+import info.magnolia.ui.api.action.ActionExecutionException;
+import info.magnolia.ui.api.context.UiContext;
+import info.magnolia.ui.api.event.AdmincentralEventBus;
+import info.magnolia.ui.api.event.ContentChangedEvent;
+import info.magnolia.ui.api.overlay.ConfirmationCallback;
+import info.magnolia.ui.form.action.SaveFormActionDefinition;
+import info.magnolia.ui.vaadin.overlay.MessageStyleTypeEnum;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.StringUtils;
+import org.springframework.web.context.WebApplicationContext;
+import org.springframework.web.context.support.WebApplicationContextUtils;
+
+import javax.inject.Named;
+import javax.servlet.ServletContext;
+import java.util.Collection;
+
+public class DeleteCategoryAction extends AbstractAction<SaveFormActionDefinition> {
+
+    @Autowired private CategoryRepository categoryRepository;
+
+    private final Collection<BeanItem<Category>> items;
+    private final SimpleTranslator               i18n;
+    private final UiContext                      uiContext;
+    private final EventBus                       eventBus;
+
+    @Inject
+    public DeleteCategoryAction(SaveFormActionDefinition definition,
+                                Collection<BeanItem<Category>> items,
+                                SimpleTranslator i18n,
+                                UiContext uiContext,
+                                @Named(AdmincentralEventBus.NAME) EventBus eventBus,
+                                ServletContext servletContext) {
+        super(definition);
+
+        this.items = items;
+        this.i18n = i18n;
+        this.uiContext = uiContext;
+        this.eventBus = eventBus;
+
+        WebApplicationContext wac = WebApplicationContextUtils.getRequiredWebApplicationContext(servletContext);
+        wac.getAutowireCapableBeanFactory().autowireBean(this);
+    }
+
+    @Override
+    public void execute() throws ActionExecutionException {
+        uiContext.openConfirmation(
+                MessageStyleTypeEnum.WARNING,
+                getConfirmationQuestion(),
+                i18n.translate("ui-framework.actions.deleteItem.warningText"),
+                i18n.translate("ui-framework.actions.deleteItem.confirmText"),
+                i18n.translate("ui-framework.actions.deleteItem.cancelText"),
+                true,
+                new ConfirmationCallback() {
+
+                    @Override
+                    public void onSuccess() {
+                        DeleteCategoryAction.this.executeAfterConfirmation();
+                    }
+
+                    @Override
+                    public void onCancel() {
+                    }
+                });
+    }
+
+    protected void executeAfterConfirmation() {
+        try {
+            categoryRepository.delete(FluentIterable.from(items)
+                                                    .transform(new Function<BeanItem<Category>, Category>() {
+                                                        @Override
+                                                        public Category apply(BeanItem<Category> beanItem) {
+                                                            return beanItem.getBean();
+                                                        }
+                                                    }));
+
+
+            eventBus.fireEvent(new ContentChangedEvent(items.iterator().next().getBean()));
+
+            String message = getSuccessMessage();
+            if (!StringUtils.isEmpty(message)) {
+                uiContext.openNotification(MessageStyleTypeEnum.INFO, true, message);
+            }
+        } catch (Exception e) {
+            String message = getFailureMessage();
+            if (!StringUtils.isEmpty(message)) {
+                uiContext.openNotification(MessageStyleTypeEnum.ERROR, false, message);
+            }
+        }
+    }
+
+    private String getConfirmationQuestion() {
+        if (items.size() == 1) {
+            return i18n.translate("ui-framework.actions.deleteItem.confirmationQuestionOneItem");
+        } else {
+            return String.format(i18n.translate("ui-framework.actions.deleteItem.confirmationQuestionManyItems"), items.size());
+        }
+    }
+
+    protected String getSuccessMessage() {
+        if (items.size() == 1) {
+            return i18n.translate("ui-framework.actions.deleteItem.successOneItemDeleted");
+        } else {
+            return i18n.translate("ui-framework.actions.deleteItem.successManyItemsDeleted", items.size());
+        }
+    }
+
+    protected String getFailureMessage() {
+        return i18n.translate("ui-framework.actions.deleteItem.deletionfailure", items.size(), items.size());
+    }
+
+}

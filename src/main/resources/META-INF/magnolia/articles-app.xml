@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module SYSTEM "module.dtd" >
+<module>
+    <name>articles-app</name>
+    <displayName>Articles App</displayName>
+    <description>Management application for articles</description>
+    <versionHandler>com.sharecare.AppVersionHandler</versionHandler>
+    <version>1.0-SNAPSHOT</version>
+
+    <dependencies>
+        <dependency>
+            <name>core</name>
+            <version>5.3.6/*</version>
+        </dependency>
+        <dependency>
+            <name>ui-admincentral</name>
+            <version>5.3.6/*</version>
+        </dependency>
+        <dependency>
+            <name>ui-contentapp</name>
+            <version>5.3.6/*</version>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+
+</module>

@@ -1,0 +1,1016 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node sv:name="apps" xmlns:sv="http://www.jcp.org/jcr/sv/1.0">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>mgnl:content</sv:value>
+    </sv:property>
+    <sv:node sv:name="articles">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>mgnl:contentNode</sv:value>
+        </sv:property>
+        <sv:property sv:name="class" sv:type="String">
+            <sv:value>info.magnolia.ui.contentapp.ContentAppDescriptor</sv:value>
+        </sv:property>
+        <sv:property sv:name="appClass" sv:type="String">
+            <sv:value>info.magnolia.ui.contentapp.ContentApp</sv:value>
+        </sv:property>
+        <sv:node sv:name="subApps">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mgnl:contentNode</sv:value>
+            </sv:property>
+            <sv:node sv:name="browser">
+                <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                    <sv:value>mgnl:contentNode</sv:value>
+                </sv:property>
+                <sv:property sv:name="class" sv:type="String">
+                    <sv:value>info.magnolia.ui.contentapp.browser.BrowserSubAppDescriptor</sv:value>
+                </sv:property>
+                <sv:property sv:name="subAppClass" sv:type="String">
+                    <sv:value>info.magnolia.ui.contentapp.browser.BrowserSubApp</sv:value>
+                </sv:property>
+                <sv:node sv:name="actionbar">
+                    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                        <sv:value>mgnl:contentNode</sv:value>
+                    </sv:property>
+                    <sv:property sv:name="defaultAction" sv:type="String">
+                        <sv:value>editArticle</sv:value>
+                    </sv:property>
+                    <sv:node sv:name="sections">
+                        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                            <sv:value>mgnl:contentNode</sv:value>
+                        </sv:property>
+                        <sv:node sv:name="root">
+                            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                <sv:value>mgnl:contentNode</sv:value>
+                            </sv:property>
+                            <sv:node sv:name="groups">
+                                <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                    <sv:value>mgnl:contentNode</sv:value>
+                                </sv:property>
+                                <sv:node sv:name="addActions">
+                                    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                        <sv:value>mgnl:contentNode</sv:value>
+                                    </sv:property>
+                                    <sv:node sv:name="items">
+                                        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                            <sv:value>mgnl:contentNode</sv:value>
+                                        </sv:property>
+                                        <sv:node sv:name="addArticle">
+                                            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                                <sv:value>mgnl:contentNode</sv:value>
+                                            </sv:property>
+                                        </sv:node>
+                                    </sv:node>
+                                </sv:node>
+                                <sv:node sv:name="editActions">
+                                    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                        <sv:value>mgnl:contentNode</sv:value>
+                                    </sv:property>
+                                    <sv:node sv:name="items">
+                                        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                            <sv:value>mgnl:contentNode</sv:value>
+                                        </sv:property>
+                                        <sv:node sv:name="editArticle">
+                                            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                                <sv:value>mgnl:contentNode</sv:value>
+                                            </sv:property>
+                                        </sv:node>
+                                        <sv:node sv:name="deleteArticle">
+                                            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                                <sv:value>mgnl:contentNode</sv:value>
+                                            </sv:property>
+                                        </sv:node>
+                                    </sv:node>
+                                </sv:node>
+                            </sv:node>
+                            <sv:node sv:name="availability">
+                                <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                    <sv:value>mgnl:contentNode</sv:value>
+                                </sv:property>
+                                <sv:property sv:name="ruleClass" sv:type="String">
+                                    <sv:value>com.sharecare.AlwaysShowRule</sv:value>
+                                </sv:property>
+                            </sv:node>
+                        </sv:node>
+                    </sv:node>
+                </sv:node>
+                <sv:node sv:name="actions">
+                    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                        <sv:value>mgnl:contentNode</sv:value>
+                    </sv:property>
+                    <sv:node sv:name="addArticle">
+                        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                            <sv:value>mgnl:contentNode</sv:value>
+                        </sv:property>
+                        <sv:property sv:name="class" sv:type="String">
+                            <sv:value>info.magnolia.ui.contentapp.detail.action.CreateItemActionDefinition</sv:value>
+                        </sv:property>
+                        <sv:property sv:name="appName" sv:type="String">
+                            <sv:value>articles</sv:value>
+                        </sv:property>
+                        <sv:property sv:name="icon" sv:type="String">
+                            <sv:value>icon-add-item</sv:value>
+                        </sv:property>
+                        <sv:property sv:name="subAppId" sv:type="String">
+                            <sv:value>detail</sv:value>
+                        </sv:property>
+                        <sv:node sv:name="availability">
+                            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                <sv:value>mgnl:contentNode</sv:value>
+                            </sv:property>
+                            <sv:property sv:name="root" sv:type="String">
+                                <sv:value>true</sv:value>
+                            </sv:property>
+                        </sv:node>
+                    </sv:node>
+                    <sv:node sv:name="editArticle">
+                        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                            <sv:value>mgnl:contentNode</sv:value>
+                        </sv:property>
+                        <sv:property sv:name="class" sv:type="String">
+                            <sv:value>info.magnolia.ui.contentapp.detail.action.EditItemActionDefinition</sv:value>
+                        </sv:property>
+                        <sv:property sv:name="appName" sv:type="String">
+                            <sv:value>articles</sv:value>
+                        </sv:property>
+                        <sv:property sv:name="icon" sv:type="String">
+                            <sv:value>icon-edit</sv:value>
+                        </sv:property>
+                        <sv:property sv:name="subAppId" sv:type="String">
+                            <sv:value>detail</sv:value>
+                        </sv:property>
+                        <sv:node sv:name="availability">
+                            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                <sv:value>mgnl:contentNode</sv:value>
+                            </sv:property>
+                            <sv:property sv:name="root" sv:type="String">
+                                <sv:value>false</sv:value>
+                            </sv:property>
+                            <sv:property sv:name="nodes" sv:type="String">
+                                <sv:value>true</sv:value>
+                            </sv:property>
+                        </sv:node>
+                    </sv:node>
+                    <sv:node sv:name="deleteArticle">
+                        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                            <sv:value>mgnl:contentNode</sv:value>
+                        </sv:property>
+                        <sv:property sv:name="class" sv:type="String">
+                            <sv:value>info.magnolia.ui.api.action.ConfiguredActionDefinition</sv:value>
+                        </sv:property>
+                        <sv:property sv:name="implementationClass" sv:type="String">
+                            <sv:value>com.sharecare.article.ui.DeleteArticleAction</sv:value>
+                        </sv:property>
+                        <sv:property sv:name="icon" sv:type="String">
+                            <sv:value>icon-delete</sv:value>
+                        </sv:property>
+                        <sv:node sv:name="availability">
+                            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                <sv:value>mgnl:contentNode</sv:value>
+                            </sv:property>
+                            <sv:property sv:name="root" sv:type="String">
+                                <sv:value>false</sv:value>
+                            </sv:property>
+                            <sv:property sv:name="nodes" sv:type="String">
+                                <sv:value>true</sv:value>
+                            </sv:property>
+                        </sv:node>
+                    </sv:node>
+                </sv:node>
+                <sv:node sv:name="workbench">
+                    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                        <sv:value>mgnl:contentNode</sv:value>
+                    </sv:property>
+                    <sv:property sv:name="dropConstraintClass" sv:type="String">
+                        <sv:value>info.magnolia.ui.workbench.tree.drop.AlwaysTrueDropConstraint</sv:value>
+                    </sv:property>
+                    <sv:property sv:name="editable" sv:type="String">
+                        <sv:value>false</sv:value>
+                    </sv:property>
+                    <sv:property sv:name="path" sv:type="String">
+                        <sv:value></sv:value>
+                    </sv:property>
+                    <sv:node sv:name="contentViews">
+                        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                            <sv:value>mgnl:contentNode</sv:value>
+                        </sv:property>
+                        <sv:node sv:name="list">
+                            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                <sv:value>mgnl:contentNode</sv:value>
+                            </sv:property>
+                            <sv:property sv:name="class" sv:type="String">
+                                <sv:value>com.sharecare.article.ui.ArticleListPresenterDefinition</sv:value>
+                            </sv:property>
+                            <sv:property sv:name="active" sv:type="Boolean">
+                                <sv:value>true</sv:value>
+                            </sv:property>
+                            <sv:node sv:name="columns">
+                                <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                    <sv:value>mgnl:contentNode</sv:value>
+                                </sv:property>
+                                <sv:node sv:name="title">
+                                    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                        <sv:value>mgnl:contentNode</sv:value>
+                                    </sv:property>
+                                    <sv:property sv:name="class" sv:type="String">
+                                        <sv:value>info.magnolia.ui.workbench.column.definition.PropertyColumnDefinition</sv:value>
+                                    </sv:property>
+                                    <sv:property sv:name="editable" sv:type="Boolean">
+                                        <sv:value>false</sv:value>
+                                    </sv:property>
+                                    <sv:property sv:name="propertyName" sv:type="String">
+                                        <sv:value>title</sv:value>
+                                    </sv:property>
+                                    <sv:property sv:name="sortable" sv:type="Boolean">
+                                        <sv:value>true</sv:value>
+                                    </sv:property>
+                                </sv:node>
+                                <sv:node sv:name="url">
+                                    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                        <sv:value>mgnl:contentNode</sv:value>
+                                    </sv:property>
+                                    <sv:property sv:name="class" sv:type="String">
+                                        <sv:value>info.magnolia.ui.workbench.column.definition.PropertyColumnDefinition</sv:value>
+                                    </sv:property>
+                                    <sv:property sv:name="editable" sv:type="Boolean">
+                                        <sv:value>false</sv:value>
+                                    </sv:property>
+                                    <sv:property sv:name="propertyName" sv:type="String">
+                                        <sv:value>url</sv:value>
+                                    </sv:property>
+                                    <sv:property sv:name="sortable" sv:type="Boolean">
+                                        <sv:value>true</sv:value>
+                                    </sv:property>
+                                </sv:node>
+                                <sv:node sv:name="category">
+                                    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                        <sv:value>mgnl:contentNode</sv:value>
+                                    </sv:property>
+                                    <sv:property sv:name="class" sv:type="String">
+                                        <sv:value>com.sharecare.category.ui.CategoryColumnDefinition</sv:value>
+                                    </sv:property>
+                                    <sv:property sv:name="editable" sv:type="Boolean">
+                                        <sv:value>false</sv:value>
+                                    </sv:property>
+                                    <sv:property sv:name="propertyName" sv:type="String">
+                                        <sv:value>category</sv:value>
+                                    </sv:property>
+                                    <sv:property sv:name="sortable" sv:type="Boolean">
+                                        <sv:value>true</sv:value>
+                                    </sv:property>
+                                </sv:node>
+                                <sv:node sv:name="published">
+                                    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                        <sv:value>mgnl:contentNode</sv:value>
+                                    </sv:property>
+                                    <sv:property sv:name="class" sv:type="String">
+                                        <sv:value>info.magnolia.ui.workbench.column.definition.PropertyColumnDefinition</sv:value>
+                                    </sv:property>
+                                    <sv:property sv:name="editable" sv:type="Boolean">
+                                        <sv:value>false</sv:value>
+                                    </sv:property>
+                                    <sv:property sv:name="propertyName" sv:type="String">
+                                        <sv:value>published</sv:value>
+                                    </sv:property>
+                                    <sv:property sv:name="sortable" sv:type="Boolean">
+                                        <sv:value>true</sv:value>
+                                    </sv:property>
+                                </sv:node>
+                            </sv:node>
+                        </sv:node>
+                        <sv:node sv:name="tree">
+                            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                <sv:value>mgnl:contentNode</sv:value>
+                            </sv:property>
+                            <sv:property sv:name="class" sv:type="String">
+                                <sv:value>com.sharecare.article.ui.ArticleTreePresenterDefinition</sv:value>
+                            </sv:property>
+                            <sv:node sv:name="columns">
+                                <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                    <sv:value>mgnl:contentNode</sv:value>
+                                </sv:property>
+                                <sv:property sv:name="extends" sv:type="String">
+                                    <sv:value>../../list/columns</sv:value>
+                                </sv:property>
+                            </sv:node>
+                        </sv:node>
+                    </sv:node>
+                </sv:node>
+                <sv:node sv:name="contentConnector">
+                    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                        <sv:value>mgnl:contentNode</sv:value>
+                    </sv:property>
+                    <sv:property sv:name="class" sv:type="String">
+                        <sv:value>info.magnolia.ui.vaadin.integration.contentconnector.ConfiguredContentConnectorDefinition</sv:value>
+                    </sv:property>
+                    <sv:property sv:name="implementationClass" sv:type="String">
+                        <sv:value>com.sharecare.article.container.ArticleConnector</sv:value>
+                    </sv:property>
+                </sv:node>
+            </sv:node>
+            <sv:node sv:name="detail">
+                <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                    <sv:value>mgnl:contentNode</sv:value>
+                </sv:property>
+                <sv:property sv:name="class" sv:type="String">
+                    <sv:value>info.magnolia.ui.contentapp.detail.ConfiguredDetailSubAppDescriptor</sv:value>
+                </sv:property>
+                <sv:property sv:name="subAppClass" sv:type="String">
+                    <sv:value>info.magnolia.ui.contentapp.detail.DetailSubApp</sv:value>
+                </sv:property>
+                <sv:node sv:name="actions">
+                    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                        <sv:value>mgnl:contentNode</sv:value>
+                    </sv:property>
+                    <sv:node sv:name="commit">
+                        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                            <sv:value>mgnl:contentNode</sv:value>
+                        </sv:property>
+                        <sv:property sv:name="class" sv:type="String">
+                            <sv:value>info.magnolia.ui.form.action.SaveFormActionDefinition</sv:value>
+                        </sv:property>
+                        <sv:property sv:name="implementationClass" sv:type="String">
+                            <sv:value>com.sharecare.article.ui.SaveArticleAction</sv:value>
+                        </sv:property>
+                        <sv:node sv:name="availability">
+                            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                <sv:value>mgnl:contentNode</sv:value>
+                            </sv:property>
+                            <sv:property sv:name="root" sv:type="String">
+                                <sv:value>true</sv:value>
+                            </sv:property>
+                            <sv:property sv:name="nodes" sv:type="String">
+                                <sv:value>true</sv:value>
+                            </sv:property>
+                        </sv:node>
+                    </sv:node>
+                    <sv:node sv:name="cancel">
+                        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                            <sv:value>mgnl:contentNode</sv:value>
+                        </sv:property>
+                        <sv:property sv:name="class" sv:type="String">
+                            <sv:value>info.magnolia.ui.form.action.CancelFormActionDefinition</sv:value>
+                        </sv:property>
+                        <sv:node sv:name="availability">
+                            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                <sv:value>mgnl:contentNode</sv:value>
+                            </sv:property>
+                            <sv:property sv:name="root" sv:type="String">
+                                <sv:value>true</sv:value>
+                            </sv:property>
+                            <sv:property sv:name="nodes" sv:type="String">
+                                <sv:value>true</sv:value>
+                            </sv:property>
+                        </sv:node>
+                    </sv:node>
+                </sv:node>
+                <sv:node sv:name="editor">
+                    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                        <sv:value>mgnl:contentNode</sv:value>
+                    </sv:property>
+                    <sv:node sv:name="actions">
+                        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                            <sv:value>mgnl:contentNode</sv:value>
+                        </sv:property>
+                        <sv:node sv:name="commit">
+                            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                <sv:value>mgnl:contentNode</sv:value>
+                            </sv:property>
+                        </sv:node>
+                        <sv:node sv:name="cancel">
+                            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                <sv:value>mgnl:contentNode</sv:value>
+                            </sv:property>
+                        </sv:node>
+                    </sv:node>
+                    <sv:node sv:name="form">
+                        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                            <sv:value>mgnl:contentNode</sv:value>
+                        </sv:property>
+                        <sv:node sv:name="tabs">
+                            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                <sv:value>mgnl:contentNode</sv:value>
+                            </sv:property>
+                            <sv:node sv:name="details">
+                                <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                    <sv:value>mgnl:contentNode</sv:value>
+                                </sv:property>
+                                <sv:node sv:name="fields">
+                                    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                        <sv:value>mgnl:contentNode</sv:value>
+                                    </sv:property>
+                                    <sv:node sv:name="id">
+                                        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                            <sv:value>mgnl:contentNode</sv:value>
+                                        </sv:property>
+                                        <sv:property sv:name="class" sv:type="String">
+                                            <sv:value>info.magnolia.ui.form.field.definition.TextFieldDefinition</sv:value>
+                                        </sv:property>
+                                        <sv:property sv:name="readOnly" sv:type="String">
+                                            <sv:value>true</sv:value>
+                                        </sv:property>
+                                    </sv:node>
+                                    <sv:node sv:name="title">
+                                        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                            <sv:value>mgnl:contentNode</sv:value>
+                                        </sv:property>
+                                        <sv:property sv:name="class" sv:type="String">
+                                            <sv:value>info.magnolia.ui.form.field.definition.TextFieldDefinition</sv:value>
+                                        </sv:property>
+                                        <sv:property sv:name="required" sv:type="String">
+                                            <sv:value>true</sv:value>
+                                        </sv:property>
+                                    </sv:node>
+                                    <sv:node sv:name="url">
+                                        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                            <sv:value>mgnl:contentNode</sv:value>
+                                        </sv:property>
+                                        <sv:property sv:name="class" sv:type="String">
+                                            <sv:value>info.magnolia.ui.form.field.definition.TextFieldDefinition</sv:value>
+                                        </sv:property>
+                                        <sv:property sv:name="required" sv:type="String">
+                                            <sv:value>true</sv:value>
+                                        </sv:property>
+                                    </sv:node>
+                                    <sv:node sv:name="category">
+                                        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                            <sv:value>mgnl:contentNode</sv:value>
+                                        </sv:property>
+                                        <sv:property sv:name="class" sv:type="String">
+                                            <sv:value>com.sharecare.category.ui.CategorySelectorFieldDefinition</sv:value>
+                                        </sv:property>
+                                        <sv:property sv:name="required" sv:type="String">
+                                            <sv:value>true</sv:value>
+                                        </sv:property>
+                                    </sv:node>
+                                    <sv:node sv:name="published">
+                                        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                            <sv:value>mgnl:contentNode</sv:value>
+                                        </sv:property>
+                                        <sv:property sv:name="class" sv:type="String">
+                                            <sv:value>info.magnolia.ui.form.field.definition.DateFieldDefinition</sv:value>
+                                        </sv:property>
+                                        <sv:property sv:name="readOnly" sv:type="String">
+                                            <sv:value>true</sv:value>
+                                        </sv:property>
+                                    </sv:node>
+                                    <sv:node sv:name="body">
+                                        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                            <sv:value>mgnl:contentNode</sv:value>
+                                        </sv:property>
+                                        <sv:property sv:name="class" sv:type="String">
+                                            <sv:value>info.magnolia.ui.form.field.definition.RichTextFieldDefinition</sv:value>
+                                        </sv:property>
+                                        <sv:property sv:name="required" sv:type="String">
+                                            <sv:value>true</sv:value>
+                                        </sv:property>
+                                    </sv:node>
+                                </sv:node>
+                            </sv:node>
+                        </sv:node>
+                    </sv:node>
+                </sv:node>
+                <sv:node sv:name="contentConnector">
+                    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                        <sv:value>mgnl:contentNode</sv:value>
+                    </sv:property>
+                    <sv:property sv:name="extends" sv:type="String">
+                        <sv:value>../../browser/contentConnector</sv:value>
+                    </sv:property>
+                </sv:node>
+            </sv:node>
+        </sv:node>
+        <sv:node sv:name="chooseDialog">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mgnl:contentNode</sv:value>
+            </sv:property>
+            <sv:property sv:name="class" sv:type="String">
+                <sv:value>info.magnolia.ui.dialog.definition.ConfiguredChooseDialogDefinition</sv:value>
+            </sv:property>
+            <sv:node sv:name="field">
+                <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                    <sv:value>mgnl:contentNode</sv:value>
+                </sv:property>
+                <sv:property sv:name="class" sv:type="String">
+                    <sv:value>info.magnolia.ui.contentapp.field.WorkbenchFieldDefinition</sv:value>
+                </sv:property>
+                <sv:property sv:name="path" sv:type="String">
+                    <sv:value></sv:value>
+                </sv:property>
+                <sv:node sv:name="workbench">
+                    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                        <sv:value>mgnl:contentNode</sv:value>
+                    </sv:property>
+                    <sv:property sv:name="extends" sv:type="String">
+                        <sv:value>../../../subApps/browser/workbench</sv:value>
+                    </sv:property>
+                </sv:node>
+            </sv:node>
+            <sv:node sv:name="actions">
+                <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                    <sv:value>mgnl:contentNode</sv:value>
+                </sv:property>
+                <sv:node sv:name="commit">
+                    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                        <sv:value>mgnl:contentNode</sv:value>
+                    </sv:property>
+                    <sv:property sv:name="callSuccess" sv:type="String">
+                        <sv:value>true</sv:value>
+                    </sv:property>
+                    <sv:property sv:name="class" sv:type="String">
+                        <sv:value>info.magnolia.ui.dialog.choosedialog.action.ChooseDialogActionDefinition</sv:value>
+                    </sv:property>
+                    <sv:property sv:name="name" sv:type="String">
+                        <sv:value>commit</sv:value>
+                    </sv:property>
+                </sv:node>
+                <sv:node sv:name="cancel">
+                    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                        <sv:value>mgnl:contentNode</sv:value>
+                    </sv:property>
+                    <sv:property sv:name="callSuccess" sv:type="String">
+                        <sv:value>false</sv:value>
+                    </sv:property>
+                    <sv:property sv:name="class" sv:type="String">
+                        <sv:value>info.magnolia.ui.dialog.choosedialog.action.ChooseDialogActionDefinition</sv:value>
+                    </sv:property>
+                    <sv:property sv:name="name" sv:type="String">
+                        <sv:value>cancel</sv:value>
+                    </sv:property>
+                </sv:node>
+            </sv:node>
+        </sv:node>
+    </sv:node>
+    <sv:node sv:name="categories">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>mgnl:contentNode</sv:value>
+        </sv:property>
+        <sv:property sv:name="class" sv:type="String">
+            <sv:value>info.magnolia.ui.contentapp.ContentAppDescriptor</sv:value>
+        </sv:property>
+        <sv:property sv:name="appClass" sv:type="String">
+            <sv:value>info.magnolia.ui.contentapp.ContentApp</sv:value>
+        </sv:property>
+        <sv:node sv:name="subApps">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mgnl:contentNode</sv:value>
+            </sv:property>
+            <sv:node sv:name="browser">
+                <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                    <sv:value>mgnl:contentNode</sv:value>
+                </sv:property>
+                <sv:property sv:name="class" sv:type="String">
+                    <sv:value>info.magnolia.ui.contentapp.browser.BrowserSubAppDescriptor</sv:value>
+                </sv:property>
+                <sv:property sv:name="subAppClass" sv:type="String">
+                    <sv:value>info.magnolia.ui.contentapp.browser.BrowserSubApp</sv:value>
+                </sv:property>
+                <sv:node sv:name="actionbar">
+                    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                        <sv:value>mgnl:contentNode</sv:value>
+                    </sv:property>
+                    <sv:property sv:name="defaultAction" sv:type="String">
+                        <sv:value>editCategory</sv:value>
+                    </sv:property>
+                    <sv:node sv:name="sections">
+                        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                            <sv:value>mgnl:contentNode</sv:value>
+                        </sv:property>
+                        <sv:node sv:name="root">
+                            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                <sv:value>mgnl:contentNode</sv:value>
+                            </sv:property>
+                            <sv:node sv:name="groups">
+                                <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                    <sv:value>mgnl:contentNode</sv:value>
+                                </sv:property>
+                                <sv:node sv:name="addActions">
+                                    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                        <sv:value>mgnl:contentNode</sv:value>
+                                    </sv:property>
+                                    <sv:node sv:name="items">
+                                        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                            <sv:value>mgnl:contentNode</sv:value>
+                                        </sv:property>
+                                        <sv:node sv:name="addCategory">
+                                            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                                <sv:value>mgnl:contentNode</sv:value>
+                                            </sv:property>
+                                        </sv:node>
+                                    </sv:node>
+                                </sv:node>
+                                <sv:node sv:name="editActions">
+                                    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                        <sv:value>mgnl:contentNode</sv:value>
+                                    </sv:property>
+                                    <sv:node sv:name="items">
+                                        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                            <sv:value>mgnl:contentNode</sv:value>
+                                        </sv:property>
+                                        <sv:node sv:name="editCategory">
+                                            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                                <sv:value>mgnl:contentNode</sv:value>
+                                            </sv:property>
+                                        </sv:node>
+                                        <sv:node sv:name="deleteCategory">
+                                            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                                <sv:value>mgnl:contentNode</sv:value>
+                                            </sv:property>
+                                        </sv:node>
+                                    </sv:node>
+                                </sv:node>
+                            </sv:node>
+                            <sv:node sv:name="availability">
+                                <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                    <sv:value>mgnl:contentNode</sv:value>
+                                </sv:property>
+                                <sv:property sv:name="nodes" sv:type="String">
+                                    <sv:value>false</sv:value>
+                                </sv:property>
+                                <sv:property sv:name="root" sv:type="String">
+                                    <sv:value>true</sv:value>
+                                </sv:property>
+                            </sv:node>
+                        </sv:node>
+                    </sv:node>
+                </sv:node>
+                <sv:node sv:name="actions">
+                    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                        <sv:value>mgnl:contentNode</sv:value>
+                    </sv:property>
+                    <sv:node sv:name="addCategory">
+                        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                            <sv:value>mgnl:contentNode</sv:value>
+                        </sv:property>
+                        <sv:property sv:name="class" sv:type="String">
+                            <sv:value>info.magnolia.ui.contentapp.detail.action.CreateItemActionDefinition</sv:value>
+                        </sv:property>
+                        <sv:property sv:name="appName" sv:type="String">
+                            <sv:value>categories</sv:value>
+                        </sv:property>
+                        <sv:property sv:name="icon" sv:type="String">
+                            <sv:value>icon-add-item</sv:value>
+                        </sv:property>
+                        <sv:property sv:name="subAppId" sv:type="String">
+                            <sv:value>detail</sv:value>
+                        </sv:property>
+                        <sv:node sv:name="availability">
+                            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                <sv:value>mgnl:contentNode</sv:value>
+                            </sv:property>
+                            <sv:property sv:name="root" sv:type="String">
+                                <sv:value>true</sv:value>
+                            </sv:property>
+                        </sv:node>
+                    </sv:node>
+                    <sv:node sv:name="editCategory">
+                        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                            <sv:value>mgnl:contentNode</sv:value>
+                        </sv:property>
+                        <sv:property sv:name="class" sv:type="String">
+                            <sv:value>info.magnolia.ui.contentapp.detail.action.EditItemActionDefinition</sv:value>
+                        </sv:property>
+                        <sv:property sv:name="appName" sv:type="String">
+                            <sv:value>categories</sv:value>
+                        </sv:property>
+                        <sv:property sv:name="icon" sv:type="String">
+                            <sv:value>icon-edit</sv:value>
+                        </sv:property>
+                        <sv:property sv:name="subAppId" sv:type="String">
+                            <sv:value>detail</sv:value>
+                        </sv:property>
+                        <sv:node sv:name="availability">
+                            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                <sv:value>mgnl:contentNode</sv:value>
+                            </sv:property>
+                            <sv:property sv:name="root" sv:type="String">
+                                <sv:value>false</sv:value>
+                            </sv:property>
+                            <sv:property sv:name="nodes" sv:type="String">
+                                <sv:value>true</sv:value>
+                            </sv:property>
+                        </sv:node>
+                    </sv:node>
+                    <sv:node sv:name="deleteCategory">
+                        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                            <sv:value>mgnl:contentNode</sv:value>
+                        </sv:property>
+                        <sv:property sv:name="class" sv:type="String">
+                            <sv:value>info.magnolia.ui.api.action.ConfiguredActionDefinition</sv:value>
+                        </sv:property>
+                        <sv:property sv:name="implementationClass" sv:type="String">
+                            <sv:value>com.sharecare.category.ui.DeleteCategoryAction</sv:value>
+                        </sv:property>
+                        <sv:property sv:name="icon" sv:type="String">
+                            <sv:value>icon-delete</sv:value>
+                        </sv:property>
+                        <sv:node sv:name="availability">
+                            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                <sv:value>mgnl:contentNode</sv:value>
+                            </sv:property>
+                            <sv:property sv:name="root" sv:type="String">
+                                <sv:value>false</sv:value>
+                            </sv:property>
+                            <sv:property sv:name="nodes" sv:type="String">
+                                <sv:value>true</sv:value>
+                            </sv:property>
+                        </sv:node>
+                    </sv:node>
+                </sv:node>
+                <sv:node sv:name="workbench">
+                    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                        <sv:value>mgnl:contentNode</sv:value>
+                    </sv:property>
+                    <sv:property sv:name="dropConstraintClass" sv:type="String">
+                        <sv:value>info.magnolia.ui.workbench.tree.drop.AlwaysTrueDropConstraint</sv:value>
+                    </sv:property>
+                    <sv:property sv:name="editable" sv:type="String">
+                        <sv:value>false</sv:value>
+                    </sv:property>
+                    <sv:property sv:name="path" sv:type="String">
+                        <sv:value></sv:value>
+                    </sv:property>
+                    <sv:node sv:name="contentViews">
+                        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                            <sv:value>mgnl:contentNode</sv:value>
+                        </sv:property>
+                        <sv:node sv:name="list">
+                            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                <sv:value>mgnl:contentNode</sv:value>
+                            </sv:property>
+                            <sv:property sv:name="class" sv:type="String">
+                                <sv:value>com.sharecare.category.ui.CategoryListPresenterDefinition</sv:value>
+                            </sv:property>
+                            <sv:property sv:name="active" sv:type="Boolean">
+                                <sv:value>true</sv:value>
+                            </sv:property>
+                            <sv:node sv:name="columns">
+                                <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                    <sv:value>mgnl:contentNode</sv:value>
+                                </sv:property>
+                                <sv:node sv:name="title">
+                                    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                        <sv:value>mgnl:contentNode</sv:value>
+                                    </sv:property>
+                                    <sv:property sv:name="class" sv:type="String">
+                                        <sv:value>info.magnolia.ui.workbench.column.definition.PropertyColumnDefinition</sv:value>
+                                    </sv:property>
+                                    <sv:property sv:name="editable" sv:type="Boolean">
+                                        <sv:value>false</sv:value>
+                                    </sv:property>
+                                    <sv:property sv:name="propertyName" sv:type="String">
+                                        <sv:value>title</sv:value>
+                                    </sv:property>
+                                    <sv:property sv:name="sortable" sv:type="Boolean">
+                                        <sv:value>true</sv:value>
+                                    </sv:property>
+                                </sv:node>
+                                <sv:node sv:name="url">
+                                    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                        <sv:value>mgnl:contentNode</sv:value>
+                                    </sv:property>
+                                    <sv:property sv:name="class" sv:type="String">
+                                        <sv:value>info.magnolia.ui.workbench.column.definition.PropertyColumnDefinition</sv:value>
+                                    </sv:property>
+                                    <sv:property sv:name="editable" sv:type="Boolean">
+                                        <sv:value>false</sv:value>
+                                    </sv:property>
+                                    <sv:property sv:name="propertyName" sv:type="String">
+                                        <sv:value>url</sv:value>
+                                    </sv:property>
+                                    <sv:property sv:name="sortable" sv:type="Boolean">
+                                        <sv:value>true</sv:value>
+                                    </sv:property>
+                                </sv:node>
+                            </sv:node>
+                        </sv:node>
+                        <sv:node sv:name="tree">
+                            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                <sv:value>mgnl:contentNode</sv:value>
+                            </sv:property>
+                            <sv:property sv:name="class" sv:type="String">
+                                <sv:value>com.sharecare.category.ui.CategoryTreePresenterDefinition</sv:value>
+                            </sv:property>
+                            <sv:node sv:name="columns">
+                                <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                    <sv:value>mgnl:contentNode</sv:value>
+                                </sv:property>
+                                <sv:property sv:name="extends" sv:type="String">
+                                    <sv:value>../../list/columns</sv:value>
+                                </sv:property>
+                            </sv:node>
+                        </sv:node>
+                    </sv:node>
+                </sv:node>
+                <sv:node sv:name="contentConnector">
+                    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                        <sv:value>mgnl:contentNode</sv:value>
+                    </sv:property>
+                    <sv:property sv:name="class" sv:type="String">
+                        <sv:value>info.magnolia.ui.vaadin.integration.contentconnector.ConfiguredContentConnectorDefinition</sv:value>
+                    </sv:property>
+                    <sv:property sv:name="implementationClass" sv:type="String">
+                        <sv:value>com.sharecare.category.container.CategoryConnector</sv:value>
+                    </sv:property>
+                </sv:node>
+            </sv:node>
+            <sv:node sv:name="detail">
+                <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                    <sv:value>mgnl:contentNode</sv:value>
+                </sv:property>
+                <sv:property sv:name="class" sv:type="String">
+                    <sv:value>info.magnolia.ui.contentapp.detail.ConfiguredDetailSubAppDescriptor</sv:value>
+                </sv:property>
+                <sv:property sv:name="subAppClass" sv:type="String">
+                    <sv:value>info.magnolia.ui.contentapp.detail.DetailSubApp</sv:value>
+                </sv:property>
+                <sv:node sv:name="actions">
+                    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                        <sv:value>mgnl:contentNode</sv:value>
+                    </sv:property>
+                    <sv:node sv:name="commit">
+                        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                            <sv:value>mgnl:contentNode</sv:value>
+                        </sv:property>
+                        <sv:property sv:name="class" sv:type="String">
+                            <sv:value>info.magnolia.ui.form.action.SaveFormActionDefinition</sv:value>
+                        </sv:property>
+                        <sv:property sv:name="implementationClass" sv:type="String">
+                            <sv:value>com.sharecare.category.ui.SaveCategoryAction</sv:value>
+                        </sv:property>
+                        <sv:node sv:name="availability">
+                            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                <sv:value>mgnl:contentNode</sv:value>
+                            </sv:property>
+                            <sv:property sv:name="root" sv:type="String">
+                                <sv:value>true</sv:value>
+                            </sv:property>
+                            <sv:property sv:name="nodes" sv:type="String">
+                                <sv:value>true</sv:value>
+                            </sv:property>
+                        </sv:node>
+                    </sv:node>
+                    <sv:node sv:name="cancel">
+                        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                            <sv:value>mgnl:contentNode</sv:value>
+                        </sv:property>
+                        <sv:property sv:name="class" sv:type="String">
+                            <sv:value>info.magnolia.ui.form.action.CancelFormActionDefinition</sv:value>
+                        </sv:property>
+                        <sv:node sv:name="availability">
+                            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                <sv:value>mgnl:contentNode</sv:value>
+                            </sv:property>
+                            <sv:property sv:name="root" sv:type="String">
+                                <sv:value>true</sv:value>
+                            </sv:property>
+                            <sv:property sv:name="nodes" sv:type="String">
+                                <sv:value>true</sv:value>
+                            </sv:property>
+                        </sv:node>
+                    </sv:node>
+                </sv:node>
+                <sv:node sv:name="editor">
+                    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                        <sv:value>mgnl:contentNode</sv:value>
+                    </sv:property>
+                    <sv:node sv:name="actions">
+                        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                            <sv:value>mgnl:contentNode</sv:value>
+                        </sv:property>
+                        <sv:node sv:name="commit">
+                            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                <sv:value>mgnl:contentNode</sv:value>
+                            </sv:property>
+                        </sv:node>
+                        <sv:node sv:name="cancel">
+                            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                <sv:value>mgnl:contentNode</sv:value>
+                            </sv:property>
+                        </sv:node>
+                    </sv:node>
+                    <sv:node sv:name="form">
+                        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                            <sv:value>mgnl:contentNode</sv:value>
+                        </sv:property>
+                        <sv:node sv:name="tabs">
+                            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                <sv:value>mgnl:contentNode</sv:value>
+                            </sv:property>
+                            <sv:node sv:name="details">
+                                <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                    <sv:value>mgnl:contentNode</sv:value>
+                                </sv:property>
+                                <sv:node sv:name="fields">
+                                    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                        <sv:value>mgnl:contentNode</sv:value>
+                                    </sv:property>
+                                    <sv:node sv:name="id">
+                                        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                            <sv:value>mgnl:contentNode</sv:value>
+                                        </sv:property>
+                                        <sv:property sv:name="class" sv:type="String">
+                                            <sv:value>info.magnolia.ui.form.field.definition.TextFieldDefinition</sv:value>
+                                        </sv:property>
+                                        <sv:property sv:name="readOnly" sv:type="String">
+                                            <sv:value>true</sv:value>
+                                        </sv:property>
+                                    </sv:node>
+                                    <sv:node sv:name="title">
+                                        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                            <sv:value>mgnl:contentNode</sv:value>
+                                        </sv:property>
+                                        <sv:property sv:name="class" sv:type="String">
+                                            <sv:value>info.magnolia.ui.form.field.definition.TextFieldDefinition</sv:value>
+                                        </sv:property>
+                                        <sv:property sv:name="required" sv:type="String">
+                                            <sv:value>true</sv:value>
+                                        </sv:property>
+                                    </sv:node>
+                                    <sv:node sv:name="url">
+                                        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                                            <sv:value>mgnl:contentNode</sv:value>
+                                        </sv:property>
+                                        <sv:property sv:name="class" sv:type="String">
+                                            <sv:value>info.magnolia.ui.form.field.definition.TextFieldDefinition</sv:value>
+                                        </sv:property>
+                                        <sv:property sv:name="required" sv:type="String">
+                                            <sv:value>true</sv:value>
+                                        </sv:property>
+                                    </sv:node>
+                                </sv:node>
+                            </sv:node>
+                        </sv:node>
+                    </sv:node>
+                </sv:node>
+                <sv:node sv:name="contentConnector">
+                    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                        <sv:value>mgnl:contentNode</sv:value>
+                    </sv:property>
+                    <sv:property sv:name="extends" sv:type="String">
+                        <sv:value>../../browser/contentConnector</sv:value>
+                    </sv:property>
+                </sv:node>
+            </sv:node>
+        </sv:node>
+        <sv:node sv:name="chooseDialog">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mgnl:contentNode</sv:value>
+            </sv:property>
+            <sv:property sv:name="class" sv:type="String">
+                <sv:value>info.magnolia.ui.dialog.definition.ConfiguredChooseDialogDefinition</sv:value>
+            </sv:property>
+            <sv:node sv:name="field">
+                <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                    <sv:value>mgnl:contentNode</sv:value>
+                </sv:property>
+                <sv:property sv:name="class" sv:type="String">
+                    <sv:value>info.magnolia.ui.contentapp.field.WorkbenchFieldDefinition</sv:value>
+                </sv:property>
+                <sv:property sv:name="path" sv:type="String">
+                    <sv:value></sv:value>
+                </sv:property>
+                <sv:node sv:name="workbench">
+                    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                        <sv:value>mgnl:contentNode</sv:value>
+                    </sv:property>
+                    <sv:property sv:name="extends" sv:type="String">
+                        <sv:value>../../../subApps/browser/workbench</sv:value>
+                    </sv:property>
+                </sv:node>
+            </sv:node>
+            <sv:node sv:name="actions">
+                <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                    <sv:value>mgnl:contentNode</sv:value>
+                </sv:property>
+                <sv:node sv:name="commit">
+                    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                        <sv:value>mgnl:contentNode</sv:value>
+                    </sv:property>
+                    <sv:property sv:name="callSuccess" sv:type="String">
+                        <sv:value>true</sv:value>
+                    </sv:property>
+                    <sv:property sv:name="class" sv:type="String">
+                        <sv:value>info.magnolia.ui.dialog.choosedialog.action.ChooseDialogActionDefinition</sv:value>
+                    </sv:property>
+                    <sv:property sv:name="name" sv:type="String">
+                        <sv:value>commit</sv:value>
+                    </sv:property>
+                </sv:node>
+                <sv:node sv:name="cancel">
+                    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                        <sv:value>mgnl:contentNode</sv:value>
+                    </sv:property>
+                    <sv:property sv:name="callSuccess" sv:type="String">
+                        <sv:value>false</sv:value>
+                    </sv:property>
+                    <sv:property sv:name="class" sv:type="String">
+                        <sv:value>info.magnolia.ui.dialog.choosedialog.action.ChooseDialogActionDefinition</sv:value>
+                    </sv:property>
+                    <sv:property sv:name="name" sv:type="String">
+                        <sv:value>cancel</sv:value>
+                    </sv:property>
+                </sv:node>
+            </sv:node>
+        </sv:node>
+    </sv:node>
+</sv:node>

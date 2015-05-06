@@ -1,0 +1,70 @@
+<taglib xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd" version="2.1">
+    <display-name>Sharecare TagLib</display-name>
+    <tlib-version>1.0-SNAPSHOT</tlib-version>
+    <short-name>sc</short-name>
+    <uri>http://sharecare.com/taglib</uri>
+    <description>Tags for accessing Sharecare content</description>
+    <tag>
+        <description>A jsp tag for retrieving an Article by id</description>
+        <name>article</name>
+        <tag-class>com.sharecare.article.model.GetArticleTag</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>var</name>
+            <rtexprvalue>false</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>articleId</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    <tag>
+        <description>A jsp tag for retrieving all Articles</description>
+        <name>articles</name>
+        <tag-class>com.sharecare.article.model.GetArticlesTag</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>var</name>
+            <rtexprvalue>false</rtexprvalue>
+        </attribute>
+    </tag>
+    <tag>
+        <description>A jsp tag for retrieving all Articles by Category</description>
+        <name>articlesByCategory</name>
+        <tag-class>com.sharecare.article.model.GetArticlesByCategoryTag</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>var</name>
+            <rtexprvalue>false</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>categoryId</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    <tag>
+        <description>A jsp tag for retrieving a Category by id</description>
+        <name>category</name>
+        <tag-class>com.sharecare.category.model.GetCategoryTag</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>var</name>
+            <rtexprvalue>false</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>categoryId</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    <tag>
+        <description>A jsp tag for retrieving all Categories</description>
+        <name>categories</name>
+        <tag-class>com.sharecare.category.model.GetCategoriesTag</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>var</name>
+            <rtexprvalue>false</rtexprvalue>
+        </attribute>
+    </tag>
+</taglib>
